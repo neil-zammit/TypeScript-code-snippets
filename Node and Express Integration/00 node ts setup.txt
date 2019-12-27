@@ -1,0 +1,15 @@
+1.  npm init -y
+2.  tsc --init
+3.  npm i nodemon concurrently
+4.  Create src folder in root dir
+5.  Create build folder in root dir
+6.  Create index.ts file in src folder and write some test code such as a console.log
+7.  In tsconfig.json find the outDir setting, and set its value to "./build"
+8.  In tsconfig.json find the rootDir setting, and set its value to "./src"
+9.  In package.json, find the scripts object and change it as follows:
+    "scripts": {
+	"start:build": "tsc -w",
+	"start:run": "nodemon build/",
+	"start": "concurrently npm:start:*"
+     },
+10. npm start

@@ -1,0 +1,27 @@
+// Express setup
+1. npm i express
+2. Install node and express type definition files:
+   npm i @types/node @types/express
+3. import express in index.ts file
+   import express from 'express'
+4. Common express types are:
+   Application: used for initializing express app
+   Request: used for route request
+   Response: used for route response
+   NextFunction: used for middelware functions
+5. These can be imported in the following statement:
+   import express, { Application, Request, Response, NextFunction } from 'express;'
+
+// Server Setup
+4. Init express
+   const app: Application = express();
+6. Import type interfaces for request and response
+   import express, { Request, Response} from 'express';
+7. Set up Route Handler
+   app.get('/', (req: Request, res: Response) => {
+	res.send(`<h1>Test</h1>`);
+   });
+8. Listen on localhost
+   app.listen(3000, () => {
+     console.log('Listening on port 3000')
+   }  
