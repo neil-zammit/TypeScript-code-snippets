@@ -1,0 +1,12 @@
+01. npx create-react-app my-app --template typescript
+02. Delete the following 4 files:
+    App.test.tsx
+    index.css
+    logo.svg
+    serviceWorker.ts
+03. Open index.tsx and remove index.css import, serviceWorker import
+    and serviceWorker.unregister() call.
+04. Open App.tsx and remove logo.svg import
+05. Remove all the content in the main div. Leave only the
+    <div> tags.
+06. Open App.css and delete all content
